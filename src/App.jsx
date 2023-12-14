@@ -18,6 +18,10 @@ function App() {
   }
 }
 
+  const changePokemonClick = (index) => {
+    setPokemonIndex(index)
+  }
+
   console.log(PokemonIndex)
   
   return (
@@ -26,10 +30,12 @@ function App() {
 
 
       <NavBar 
-      handleClick={handleClick} 
-      returnClick={returnClick}
+      pokemonClick={changePokemonClick}
+      // handleClick={handleClick} 
+      // returnClick={returnClick}
       PokemonIndex={PokemonIndex}
-      pokemonListLength={pokemonList.length}/>
+      // pokemonListLength={pokemonList.length}
+      pokemonList={pokemonList}/>
     </div>
   );
 }
@@ -39,7 +45,6 @@ function App() {
 
 
 export default App;
-
 
 const pokemonList = [
   {
